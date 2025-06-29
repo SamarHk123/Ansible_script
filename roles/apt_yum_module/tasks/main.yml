@@ -1,0 +1,17 @@
+
+    - name: Installer le paquet nginx
+      apt:
+        name: nginx
+        state: present
+      # ou pour CentOS/RHEL:
+      # yum:
+      #   name: nginx
+      #   state: present
+
+    - name: Supprimer le paquet apache2
+      apt:
+        name: apache2
+        state: absent
+      # ou yum:
+      #   name: httpd
+      #   state: absent
