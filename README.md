@@ -1,13 +1,15 @@
-# ⚙️ Configuration Serveur avec Ansible
+# ⚙️ Ansible – Configuration Serveur
 
-Ce projet utilise **Ansible** pour configurer automatiquement un serveur Linux (VPS).
+Ce projet utilise **Ansible** pour automatiser la configuration d’un serveur (VPS).
 
-## 📁 Contenu
+## 📁 Contenu du dépôt
 
-- `inventory.ini` – Liste des serveurs à configurer  
-- `playbook.yml` – Playbook principal
+- `playbook.yml` – Playbook principal  
+- `inventory.ini` – Fichier d’inventaire avec les adresses IP  
+- `roles/` – Dossier contenant les rôles Ansible organisés par tâche  
 
-## ▶️ Utilisation
+## ▶️ Exécution du playbook
 
 ```bash
-ansible-playbook -i inventory/hosts.ini playbooks/setup.yml
+ansible-playbook -i inventory.ini playbook.yml
+
